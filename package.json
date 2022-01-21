@@ -4,10 +4,10 @@
   "description": "A typescript discord.js bot template using typeorm with mysql",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "npx tsc -b ./tsconfig.json",
+    "build": "tsc",
     "start:dev": "ts-node-dev --respawn --transpile-only --poll src/index.ts",
-    "start:prod": "npx tsc -b ./tsconfig.json && node ./dist/index.js",
-    "start": "ts-node src/index.ts"
+    "start:prod": "tsc && node ./dist/index.js",
+    "start": "node ./dist/index.js"
   },
   "repository": {
     "type": "git",

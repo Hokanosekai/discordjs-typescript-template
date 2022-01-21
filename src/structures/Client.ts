@@ -50,7 +50,7 @@ export class ExtendedClient extends Client {
 
     async registerEvents() {
         const eventsFiles = await globPromise(
-            `${__dirname}/../Events/*{.ts,.js}`
+            `${__dirname}/../events/*{.ts,.js}`
         );
         for (const filePath of eventsFiles) {
             const event: Event<keyof ClientEvents> = await ExtendedClient.importFile(filePath);
@@ -62,7 +62,7 @@ export class ExtendedClient extends Client {
     async registerCommands() {
         const slashCommands: ApplicationCommandDataResolvable[] = [];
         const commandFiles = await globPromise(
-            `${__dirname}/../Commands/*/*{.ts,.js}`
+            `${__dirname}/../commands/*/*{.ts,.js}`
         );
         for (const filePath of commandFiles) {
             const command: CommandType = await ExtendedClient.importFile(filePath);

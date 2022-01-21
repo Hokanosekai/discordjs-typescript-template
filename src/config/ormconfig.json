@@ -4,7 +4,7 @@
   "port": 3306,
   "username": "root",
   "password": "",
-  "database": "ava_bot",
+  "database": "template",
   "charset": "utf8mb4_bin",
   "autoLoadEntities": true,
   "synchronize": true,

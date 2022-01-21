@@ -1,3 +1,3 @@
 export {ExtendedClient} from './Client'
-export {Command} from './Command'
+export {Command, MessageApplication, UserApplication} from './Command'
 export {Event} from './Event'

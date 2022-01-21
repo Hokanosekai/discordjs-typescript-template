@@ -5,7 +5,7 @@ import {CommandInteractionOptionResolver} from "discord.js";
 import {ExtendedInteraction} from "../typings";
 
 export default new Event('interactionCreate', async (interaction) => {
-   if (interaction.isCommand()) {
+   if (interaction.isCommand() || interaction.isApplicationCommand()) {
        const command = client.commands.get(interaction.commandName);
        if (!command) return await interaction.reply({
            embeds: [
