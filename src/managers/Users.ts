@@ -11,12 +11,11 @@ export class UsersManager {
     }
 
     async fetch(discordID: string) {
-        if (!this._cache.has(discordID))
-            this._cache.set(discordID, (await client.database.users.findOne({
-                where: [
-                    {_discord_id: discordID}
-                ]
-            })));
+        this._cache.set(discordID, (await client.database.users.findOne({
+            where: [
+                {_discord_id: discordID}
+            ]
+        })));
         return this._cache.get(discordID);
     }
 
